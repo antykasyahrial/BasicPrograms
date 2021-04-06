@@ -4,29 +4,27 @@ using namespace std;
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int factorial(int bil,int hasil){
-     if(bil == 0){ 
-    //pemberhentian rekursif
+int factorial(int numb,int res){
+     if(numb == 0){ 
         cout<<'=';
-        return hasil;
+        return res;
     }
     else{
-        hasil*=bil;
-        cout<<bil;
-        if(bil != 1)
+        res*=numb;
+        cout<<numb;
+        if(numb != 1)
             cout<<'*';        
-        //melakukan rekursif
-        factorial(bil-1,hasil); 
+        factorial(numb-1,res); 
     }  
 }
 
 
 int main(int argc, char** argv) {
-	int bil,hasil=1;
-    cout<<"Masukan bilangan : ";
-	cin>>bil;
-    if(bil>=0){
-    	cout<<factorial(bil,hasil);
+	int numb,res=1;
+    cout<<"Input Number : ";
+	cin>>numb;
+    if(numb>=0){
+    	cout<<factorial(numb,res);
 	} else {
 		cout <<"negative";
 	}
